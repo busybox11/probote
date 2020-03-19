@@ -19,3 +19,14 @@ To properly edit `credentials.py`, here are the values :
 - `token` is your Discord Bot token
 - `admin` is your Probote administrator user ID
 - `probote_channel` is your public Probote channel ID
+
+## Bot features
+This bot has a main feature : which is channel notifications for new homeworks. It is enabled by default.
+However, it has some more command : actual trimester average retrieving, using the `pro moy` or `pro moyenne` command.
+Last (at the moment), but not least, you can debug the bot, using the `pro debug` command (undocumented at the moment, sorry).
+
+## Future improvements
+- Using a more modular approach
+- Adding a config file
+- __More documentation__ (I know)
+- Easy customization
