@@ -13,7 +13,6 @@ file = open('homework.txt', 'rb')
 
 data = ""
 homework = pickle.load(file)
-homework_bak = []
 
 file.close()
 
@@ -32,8 +31,6 @@ async def update_info_task():
                 homework.append(data['homeworks'][i]['content'])
                 pickle.dump(homework, file)
                 file.close()
-                if data['homeworks'][i]['subject'] in other_group:
-                    data['homeworks'][i]['subject'] = data['homeworks'][i]['subject'] + " - GROUPE 2"
                 if data['homeworks'][i]['files'] == []:
                     await send_notification(data['homeworks'][i]['subject'], data['homeworks'][i]['content'], None, data['homeworks'][i]['until'])
                 else:
@@ -73,8 +70,8 @@ async def on_message(message):
         print('Pong')
 
     elif message.content.lower().startswith(("pro moy", "pro moyenne")):
-        trimestre = len(data['marks']) - 1
-        moyenne = str(data['marks'][trimestre - 1]['averages']['studentClass'])
+        trimestre = len(data['marks'])
+        moyenne = str(data['marks'][trimestre]['averages']['studentClass'])
         embed = discord.Embed(title="Moyenne de la classe", color=0x00ff00)
         embed.add_field(name="Trimestre " + str(trimestre), value=moyenne, inline=False)
         await message.channel.send(embed=embed)
