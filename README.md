@@ -17,5 +17,5 @@ To properly edit `credentials.py`, here are the values :
 - `url` is your Pronote URL (__Without `eleve.html` !__)
 - `cas` is your CAS URL (`"None"` if not using it, visit [Litharvan's API](https://github.com/Litarvan/pronote-api) if not sure)
 - `token` is your Discord Bot token
-- `admin` is your Probote administrator-only channel ID
+- `admin` is your Probote administrator user ID
 - `probote_channel` is your public Probote channel ID
