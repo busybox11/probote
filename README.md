@@ -33,3 +33,6 @@ Enfin (pour le moment), mais pas des moindres, vous pouvez "débugger" le bot, e
 - Ajouter des fichiers et des commandes de configuration
 - __Plus de documentation__ (je sais, désolé)
 - Customiser certains aspects du bot
+
+## Contact
+En cas de besoin, vous pouvez me contacter sur Discord à `@busybox#2540`
