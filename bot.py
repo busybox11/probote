@@ -71,7 +71,7 @@ async def on_message(message):
 
     elif message.content.lower().startswith(("pro moy", "pro moyenne")):
         trimestre = len(data['marks'])
-        moyenne = str(data['marks'][trimestre]['averages']['studentClass'])
+        moyenne = str(data['marks'][trimestre - 1]['averages']['studentClass'])
         embed = discord.Embed(title="Moyenne de la classe", color=0x00ff00)
         embed.add_field(name="Trimestre " + str(trimestre), value=moyenne, inline=False)
         await message.channel.send(embed=embed)
