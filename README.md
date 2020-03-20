@@ -1,4 +1,4 @@
-<img src="https://github.com/busybox11/probote/blob/master/Banner Probote.png?" alt="Banner" width="1012px" height="506px">
+<img src="https://github.com/busybox11/probote/blob/master/Banner Probote.png?" alt="Banner" width="600px">
 # probote
 A Pronote Discord bot using [Litarvan's API](https://github.com/Litarvan/pronote-api)
 
