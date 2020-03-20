@@ -19,6 +19,7 @@ To properly edit `credentials.py`, here are the values :
 - `token` is your Discord Bot token
 - `admin` is your Probote administrator user ID
 - `probote_channel` is your public Probote channel ID
+You need to add double or single quotes for all values __except__ for `admin` and `probote_channel` !
 
 ## Bot features
 This bot has a main feature : which is channel notifications for new homeworks. It is enabled by default.
