@@ -7,7 +7,7 @@ Un bot Discord pour Pronote qui utilise [l'API de Litarvan](https://github.com/L
 - Installez `node`, `npm`, `python3` et `pip3`
 - Clonez ce répertoire
 - Clonez [l'API de Litarvan](https://github.com/Litarvan/pronote-api) repo
-- Installez les dépendances (`pip3 install discord aiohttp` pour ce répertoire, `npm i` pour celui de Litarvan)
+- Installez les dépendances (`pip3 install discord aiohttp html2text` pour ce répertoire, `npm i` pour celui de Litarvan)
 - Modifiez `credentials.py` avec vos propres valeurs (comment le faire dans 'Comment modifier `credentials.py`')
 - Démarrez l'API de Litarvan avec `node index.js`
 - Démarrez ce bot avec `python3 main.py`
