@@ -1,38 +1,35 @@
 <img src="https://github.com/busybox11/probote/blob/master/Banner Probote.png?" alt="Banner" width="600px">
 
 # probote
-Un bot Discord pour Pronote qui utilise [l'API de Litarvan](https://github.com/Litarvan/pronote-api)
+Un bot Discord qui informe de ce qui se passe sur Pronote grâce à [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
 
 ## Comment l'utiliser
-- Installez `node`, `npm`, `python3` et `pip3`
-- Clonez ce répertoire
-- Clonez [l'API de Litarvan](https://github.com/Litarvan/pronote-api) repo
-- Installez les dépendances (`pip3 install discord aiohttp html2text` pour ce répertoire, `npm i` pour celui de Litarvan)
-- Modifiez `credentials.py` avec vos propres valeurs (comment le faire dans 'Comment modifier `credentials.py`')
-- Démarrez l'API de Litarvan avec `node index.js`
-- Démarrez ce bot avec `python3 main.py`
+- Installez `node`, `npm`, `python3` et `pip3`.
+- Clonez ce répertoire.
+- Clonez le repo de [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
+- Installez les dépendances (`pip3 install discord aiohttp html2text` pour ce répertoire, `npm i` pour celui de Litarvan).
+- Modifiez `credentials.py` avec vos propres valeurs (voir la section suivante).
+- Démarrez l'API de Litarvan avec `node index.js`.
+- Démarrez ce bot avec `python3 main.py`.
 
 ## Comment modifier `credentials.py`
 Pour bien modifier `credentials.py`, voici les valeurs :
 - `username` est votre nom d'utilisateur PRONOTE ou de votre ENT
 - `password` est votre mot de passe PRONOTE ou de votre ENT
 - `url` est votre URL PRONOTE (__SANS `eleve.html` !__)
-- `cas` est l'URL de l'ENT (`"none"` si vous n'en avez pas, allez sur la page GitHub de [l'API de Litarvan](https://github.com/Litarvan/pronote-api) si vous n'êtes pas sûr de quoi mettre)
-- `token` est votre token Discord
+- `cas` est l'URL de l'ENT (`None` si vous n'en avez pas, voir la page GitHub de [l'API de Litarvan](https://github.com/Litarvan/pronote-api) pour plus de détails)
+- `token` est le token de votre bot Discord
 - `admin` est l'identifiant Discord de l'administrateur de Probote
 - `probote_channel` est l'identifiant du salon public de Probote
 Vous devez mettre ces valeurs entre des guillemets ou des apostrophes __sauf__ pour `admin` et `probote_channel` !
 
 ## Fonctionnalités
-Ce Bot a une fonctionnalité principale, qui est la publication de messages dans le salon Probote lors d'ajout de devoirs. Elle est activée par défaut.
-Cependant, il y a quelques commandes : Probote permet d'envoyer la moyenne de la classe pour la période actuele en utilisant les commandes `pro moy` ou `pro moyenne`.
-Enfin (pour le moment), mais pas des moindres, vous pouvez "débugger" le bot, en utilisant les commandes `pro debug` (non documentées pour le moment, désolé).
+Ce bot envoit un message à chaque fois qu'un nouveau travail à faire est ajouté ou qu'une information est envoyée au compte Pronote qui est connecté.
 
 ## Fonctionnalités et améliorations futures
-- Utiliser une approche plus modulaire dans le code
-- Ajouter des fichiers et des commandes de configuration
-- __Plus de documentation__ (je sais, désolé)
-- Customiser certains aspects du bot
+- Envoyer les longs textes sur plusieurs messages au lieu de les tronquer pour respecter la limite de cractères sur Discord.
+- Prévenir quand du "Contenu de cours" est ajouté sur Pronote.
+- Publier les messages envoyés dans l'onglet "Discussions" de Pronote.
 
 ## Contact
-En cas de besoin, vous pouvez me contacter sur Discord à `@busybox#2540`
+En cas de besoin, vous pouvez contacter le dev original de ce bot (`busybox#2540` sur Discord) ou moi-même (`ribt#9334`).
