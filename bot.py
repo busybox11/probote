@@ -35,6 +35,11 @@ async def update_notifs():
                 info.append(data['infos'][i]['content'])
                 with open('info.txt', 'wb') as file :
                     pickle.dump(info, file)
+                if data['infos'][i]['title'] == Null
+                try:
+                    data['infos'][i]['title']
+                except KeyError:
+                    data['infos'][i]['title'] = "Aucun titre"
                 await send_notification(data['infos'][i]['title'], data['infos'][i]['content'], data['infos'][i]['files'])
 
         await client.change_presence(status=discord.Status.online)
