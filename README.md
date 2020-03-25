@@ -1,7 +1,7 @@
 <img src="https://github.com/busybox11/probote/blob/master/Banner Probote.png?" alt="Banner" width="600px">
 
 # probote
-Un bot Discord qui informe de ce qui se passe sur Pronote grâce à [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
+Un bot Discord qui informe de ce qu'il se passe sur Pronote grâce à [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
 
 ## Comment l'utiliser
 - Installez `node`, `npm`, `python3` et `pip3`.
