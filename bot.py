@@ -1,4 +1,4 @@
-import os, sys, aiohttp, discord, asyncio, pickle
+import os, sys, aiohttp, discord, asyncio, pickle, validators
 import credentials
 from datetime import datetime
 from html2text import html2text
@@ -66,14 +66,21 @@ async def send_notification(title, content, files=None, timestamp=None):
     if files :
         for file in files :
             if type(file) == dict :
-                path, _ = urlretrieve(file['url'])
-                name = file['name']
+                if not validators.url(file['name']):
+                    path, _ = urlretrieve(file['url'])
+                    name = file['name']
+                    await channel.send(file=discord.File(path, unquote(name)))
+                else:
+                    await channel.send(file['name'])
             else :
-                print (file)
-                path, _ = urlretrieve(file)
-                name = file.split("/")[-1]
-                name = name.split("?")[0]
-            await channel.send(file=discord.File(path, unquote(name)))
+                if not validators.url(file):
+                    print(file)
+                    path, _ = urlretrieve(file)
+                    name = file.split("/")[-1]
+                    name = name.split("?")[0]
+                    await channel.send(file=discord.File(path, unquote(name)))
+                else:
+                    await channel.send(file)
 
 
 @client.event
