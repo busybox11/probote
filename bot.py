@@ -77,14 +77,11 @@ async def send_notification(title, content, files=None, timestamp=None):
                 else:
                     await channel.send(file['name'])
             else :
-                if not validators.url(file):
-                    print(file)
-                    path, _ = urlretrieve(file)
-                    name = file.split("/")[-1]
-                    name = name.split("?")[0]
-                    await channel.send(file=discord.File(path, unquote(name)))
-                else:
-                    await channel.send(file)
+                print(file)
+                path, _ = urlretrieve(file)
+                name = file.split("/")[-1]
+                name = name.split("?")[0]
+                await channel.send(file=discord.File(path, unquote(name)))
 
 
 @client.event
