@@ -22,7 +22,7 @@ async def update_notifs():
             async with session.post('http://127.0.0.1:21727/', json={"type": "fetch", "username": credentials.username, "password": credentials.password, "url": credentials.url, "cas": credentials.cas}) as r:
                 if r.status == 200:
                     data = await r.json()
-        
+
         for i in range(len(data['homeworks'])):
             if data['homeworks'][i]['content'] not in homework:
                 homework.append(data['homeworks'][i]['content'])
@@ -58,7 +58,7 @@ async def send_notification(title, content, files=None, timestamp=None):
 
     nbFiles = len(files) if files else 0
     if nbFiles == 0 : embed.set_footer(text="Aucun fichier attaché")
-    if nbFiles == 1: embed.set_footer(text="1 fichier attaché")
+    elif nbFiles == 1: embed.set_footer(text="1 fichier attaché")
     else: embed.set_footer(text=str(nbFiles) + " fichiers attachés")
     
     await channel.send(embed=embed)
