@@ -35,9 +35,7 @@ async def update_notifs():
                 info.append(data['infos'][i]['content'])
                 with open('info.txt', 'wb') as file :
                     pickle.dump(info, file)
-                try:
-                    data['infos'][i]['title']
-                except KeyError:
+                if not 'title' in data['infos'][i] or data['infos'][i]['title'] == "":
                     data['infos'][i]['title'] = "Aucun titre"
                 await send_notification(data['infos'][i]['title'], data['infos'][i]['content'], data['infos'][i]['files'])
 
@@ -70,12 +68,12 @@ async def send_notification(title, content, files=None, timestamp=None):
     if files :
         for file in files :
             if type(file) == dict :
-                if not validators.url(file['name']):
+                if validators.url(file['name']): # si le prof joint un lien
+                    await channel.send(file['name'])
+                else:
                     path, _ = urlretrieve(file['url'])
                     name = file['name']
-                    await channel.send(file=discord.File(path, unquote(name)))
-                else:
-                    await channel.send(file['name'])
+                    await channel.send(file=discord.File(path, unquote(name))
             else :
                 print(file)
                 path, _ = urlretrieve(file)
@@ -91,7 +89,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author != credentials.admin :
+    if message.author.id != credentials.admin :
         return
 
     if message.content.startswith('pro ping'):
