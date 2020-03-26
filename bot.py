@@ -35,8 +35,10 @@ async def update_notifs():
                 info.append(data['infos'][i]['content'])
                 with open('info.txt', 'wb') as file :
                     pickle.dump(info, file)
+
                 if not 'title' in data['infos'][i] or data['infos'][i]['title'] == "":
                     data['infos'][i]['title'] = "Aucun titre"
+                    
                 await send_notification(data['infos'][i]['title'], data['infos'][i]['content'], data['infos'][i]['files'])
 
         await client.change_presence(status=discord.Status.online)
@@ -65,16 +67,17 @@ async def send_notification(title, content, files=None, timestamp=None):
     
     await channel.send(embed=embed)
 
-    if files:
-        for file in files:
+    if files :
+        for file in files :
             if type(file) == dict :
                 if validators.url(file['name']): # si le prof joint un lien
                     await channel.send(file['name'])
                 else:
                     path, _ = urlretrieve(file['url'])
                     name = file['name']
-                    await channel.send(file=discord.File(path, unquote(name))
-            else:
+                    await channel.send(file=discord.File(path, unquote(name)))
+                    
+            else :
                 print(file)
                 path, _ = urlretrieve(file)
                 name = file.split("/")[-1]
