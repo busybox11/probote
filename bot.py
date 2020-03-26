@@ -65,8 +65,8 @@ async def send_notification(title, content, files=None, timestamp=None):
     
     await channel.send(embed=embed)
 
-    if files :
-        for file in files :
+    if files:
+        for file in files:
             if type(file) == dict :
                 if validators.url(file['name']): # si le prof joint un lien
                     await channel.send(file['name'])
@@ -74,7 +74,7 @@ async def send_notification(title, content, files=None, timestamp=None):
                     path, _ = urlretrieve(file['url'])
                     name = file['name']
                     await channel.send(file=discord.File(path, unquote(name))
-            else :
+            else:
                 print(file)
                 path, _ = urlretrieve(file)
                 name = file.split("/")[-1]
