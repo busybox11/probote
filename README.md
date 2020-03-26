@@ -32,4 +32,4 @@ Ce bot envoit un message à chaque fois qu'un nouveau travail à faire est ajout
 - Publier les messages envoyés dans l'onglet "Discussions" de Pronote.
 
 ## Contact
-En cas de besoin, vous pouvez contacter le dev original de ce bot (`busybox#2540` sur Discord) ou moi-même (`ribt#9334`).
+En cas de besoin, vous pouvez me contacter (`busybox#2540` sur Discord) ou un ami qui m'aide dans ce projet (`ribt#9334`).
