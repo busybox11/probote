@@ -7,7 +7,7 @@ Un bot Discord qui informe de ce qu'il se passe sur Pronote grâce à [l'API de 
 - Installez `node`, `npm`, `python3` et `pip3`.
 - Clonez ce répertoire.
 - Clonez le repo de [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
-- Installez les dépendances (`pip3 install discord aiohttp html2text` pour ce répertoire, `npm i` pour celui de Litarvan).
+- Installez les dépendances (`pip3 install discord aiohttp html2text validators` pour ce répertoire, `npm i` pour celui de Litarvan).
 - Modifiez `credentials.py` avec vos propres valeurs (voir la section suivante).
 - Démarrez l'API de Litarvan avec `node index.js`.
 - Démarrez ce bot avec `python3 main.py`.
