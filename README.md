@@ -16,7 +16,7 @@ Un bot Discord qui informe de ce qu'il se passe sur Pronote grâce à [l'API de 
 Pour bien modifier `credentials.py`, voici les valeurs :
 - `username` est votre nom d'utilisateur PRONOTE ou de votre ENT
 - `password` est votre mot de passe PRONOTE ou de votre ENT
-- `url` est votre URL PRONOTE (__SANS `eleve.html` !__)
+- `url` est votre URL PRONOTE (__SANS `eleve.html` !__ et avec le slash à la fin de l'URL - Exemple : https://0123456b.index-education.net/pronote/)
 - `cas` est l'URL de l'ENT (`None` si vous n'en avez pas, voir la page GitHub de [l'API de Litarvan](https://github.com/Litarvan/pronote-api) pour plus de détails)
 - `token` est le token de votre bot Discord
 - `admin` est l'identifiant Discord de l'administrateur de Probote
