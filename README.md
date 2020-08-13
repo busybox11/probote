@@ -30,6 +30,7 @@ Ce bot envoit un message à chaque fois qu'un nouveau travail à faire est ajout
 - Envoyer les longs textes sur plusieurs messages au lieu de les tronquer pour respecter la limite de cractères sur Discord.
 - Prévenir quand du "Contenu de cours" est ajouté sur Pronote.
 - Publier les messages envoyés dans l'onglet "Discussions" de Pronote.
+- Envoyer les nouvelles notes (moyenne classe, note +, note -) et les bulletins
 
 ## Contact
 En cas de besoin, vous pouvez me contacter (`busybox#2540` sur Discord) ou un ami qui m'aide dans ce projet (`ribt#9334`).
