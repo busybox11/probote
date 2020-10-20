@@ -1,5 +1,8 @@
 <img src="https://github.com/busybox11/probote/blob/master/Banner Probote.png?" alt="Banner" width="600px">
 
+# CE BOT N'EST PLUS SUPPORTÉ !
+Une nouvelle version est en cours de réécriture en nodejs, disponible sur ce repo : [probote-v2](https://github.com/busybox11/probote-v2)
+
 # probote
 Un bot Discord qui informe de ce qu'il se passe sur Pronote grâce à [l'API de Litarvan](https://github.com/Litarvan/pronote-api).
 
